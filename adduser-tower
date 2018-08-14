@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#cat -n userlist > userlist.number
+#1 Aidai Baigazieva
+#2 Aidin Kobonov
+#3 Arystanbek    Asanov
+
+
+# Run this line for check output
+#for i in $(seq 1 $( wc -l userlist.number | awk '{print $1}' ))
+#do
+#$(grep "^$i " userlist.number | awk '{print "tower-cli user create --username "tolower($2)" --first-name "$2" --last-name "$3" --email november@example.com --password novemberclass2018*"}')
+#done
+for i in $(seq 1 $( wc -l userlist.number | awk '{print $1}' ))
+do
+  grep "^$i" userlist.number | awk '{print "tower-cli user create --username "tolower($2)" --first-name "$2" --last-name "$3" --email november@example.com --password novemberclass2018*"}'
+done
